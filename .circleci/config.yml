@@ -6,6 +6,9 @@ jobs:
     docker:
       - image: arvindr226/alpine-ssh
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "26:1c:a3:09:bd:a3:9f:0f:c7:0e:c6:47:55:c9:d6:43"
       - checkout
       - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "cd /var/www/html/DongTP1 && git pull origin main"
 
