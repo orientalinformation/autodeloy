@@ -6,8 +6,6 @@ jobs:
     docker:
       - image: arvindr226/alpine-ssh
     working_directory: ~/autodeloy
-    machine:
-      enabled: true
     steps:
       - checkout
       - run:
