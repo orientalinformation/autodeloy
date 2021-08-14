@@ -19,7 +19,7 @@ jobs:
             - "26:1c:a3:09:bd:a3:9f:0f:c7:0e:c6:47:55:c9:d6:43"
       - run:
           name: Deploy main.
-          command: if [ "${CIRCLE_BRANCH}" == "main" ]; then ubuntu@18.142.103.14 'cd /var/www/html/DongTP1 && git pull origin main'; else echo "Skipped"; fi
+          command: ubuntu@18.142.103.14 'cd /var/www/html/DongTP1 && git pull origin main'; 
       # - run: ssh ubuntu@18.142.103.14 "cd /var/www/html/DongTP1 && git pull origin main"
 
 # Orchestrate our job run sequence
